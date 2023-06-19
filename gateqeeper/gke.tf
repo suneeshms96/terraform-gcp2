@@ -27,7 +27,7 @@ resource "google_container_node_pool" "my-node-pool" {
   location   = "us-central1-a"
   cluster    = google_container_cluster.cluster1.name
   node_count = 1
-  max_pods_per_node = 5
+  max_pods_per_node = 8
   node_config {
     machine_type = "e2-small"
     preemptible  = true
@@ -104,7 +104,7 @@ resource "google_container_node_pool" "public-node-pool" {
   location   = "us-central1-a"
   cluster    = google_container_cluster.public-cluster.name
   node_count = 1
-  max_pods_per_node = 5
+  max_pods_per_node = 8
   node_config {
     machine_type = "e2-small"
     preemptible  = true
@@ -130,7 +130,7 @@ resource "google_container_node_pool" "public-node-pool2" {
   location   = "us-central1-a"
   cluster    = google_container_cluster.public-cluster.name
   node_count = 1
-  max_pods_per_node = 5
+  max_pods_per_node = 8
   node_config {
     machine_type = "e2-small"
     preemptible  = true
